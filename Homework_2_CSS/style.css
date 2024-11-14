@@ -404,7 +404,7 @@ We can click on the nav elements. With text decorations there is no underline. *
 #products-page p{
   color: aliceblue;
   font-size: 19px;
-  font-weight: bold"
+  font-weight: bold;
 }
 
 #products-page img{
