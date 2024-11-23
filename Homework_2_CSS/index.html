@@ -3,32 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Using External CSS, <link> element and href attribute -->
     <link rel="stylesheet" href="style.css" />
-    <!-- The title of my second homework with CSS-->
     <title>Homework2 with CSS</title>
-    <!-- The type="text/css" specifies the type of document being linked to -->
-    <style type="text/css">
-      h1 {
-        color: rgb(34, 21, 34);
-        text-align: center;
-      }
-    </style>
   </head>
   <body id="home-page">
-    <!-- Layout: Header -->
     <header>
-      <!-- This is the main heading of the page and I used the id atribute -->
       <h1 id="top">My Dairy Shop</h1>
-      <!-- Here are the paragraphs. I use class attributes to apply the styles to the paragraphs.-->
-      <!-- First Paragrah and Second Paragraph -->
       <p class="p1">The most beautiful Dairy!</p>
       <p class="p2">MILK & MORE</p>
-      <!-- Layout: Navigation <nav> -->
       <nav>
-        <!-- Unordered list -->
         <ul>
-          <!-- I will start with Relative Hyperlinks -->
           <li>
             <a href="content/about.html"><b>ABOUT US</b></a>
           </li>
@@ -42,9 +26,7 @@
             <a href="content/contact_us.html"><b>CONTACT US</b></a>
           </li>
         </ul>
-        <!-- Here I added a Form with method Get -->
         <form action="" method="GET">
-          <!-- Inline CSS for Search, I used HSL (Hue, Saturation, Lightness) color-->
           <label for="search" style="color: hsl(120, 20%, 99%)">Search: </label>
           <input
             type="search"
@@ -56,11 +38,9 @@
         </form>
       </nav>
     </header>
-    <!-- Layout: Main part -->
     <main>
       <section>
         <article>
-          <!-- Here I will add an image. The Inline CSS is applied directly on the image. -->
           <img
             src="./assets/shop.jpg"
             alt="Milk Shop"
@@ -69,7 +49,7 @@
           />
           <hr />
           <hr />
-          <!-- anchor tag -->
+
           <p style="text-align: center">
             <i
               >You can learn more about the dairy products. Click
@@ -81,7 +61,7 @@
             class="dairy-link"
             ><b>DAIRY PRODUCTS</b></a
           >
-          <!-- Absolute Hyperlink but open in a new tab -->
+
           <p style="text-align: center">
             <i
               >Also, you can check some information about the milk. Please click
