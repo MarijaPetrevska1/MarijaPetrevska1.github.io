@@ -1,28 +1,63 @@
-//STUDENT EXCERCISE #3
+// STUDENT EXCERCISE 3
 
-// all the input elements inside the 'userInputs' div
-let inputs = document.getElementById("userInputs").children;
-// The 'result' paragraph where the user info will be displayed
+// Access the input fields and elements
+let firstNameInput = document.getElementById("firstName");
+let lastNameInput = document.getElementById("lastName");
+let emailInput = document.getElementById("email");
+let passwordInput = document.getElementById("password");
 let result = document.getElementById("result");
-// Submit Button
 let submitBtn = document.getElementById("submit");
 
-// Function to collect user information from the input elements 
-function getUserInfo(inputElements){
-    // Start with the label "User: "
-    let result = "User: ";
-    // FOR: => Loop through all input elements
-    for (let input of inputElements) {
-    // Added each input's value
-        result = result + input.value + " ";
+// Check if the elements exist before using them
+if (!firstNameInput || !lastNameInput || !emailInput || !passwordInput || !submitBtn) {
+  console.error("One or more elements are missing from the DOM.");
+} else {
+  // Array to store registered users
+  let users = [];
+
+  // Function to collect user information and validate
+  function getUserInfo() {
+    // Collect values from the input fields 
+    let firstName = firstNameInput.value;
+    let lastName = lastNameInput.value;
+    let email = emailInput.value;
+    let password = passwordInput.value;
+
+    // Validation: Check if any field is empty
+    if (!firstName || !lastName || !email || !password) {
+      return "Please fill in all fields.";
     }
-    // Add a message indicating the user is registered
-    result = result + "is registered!"
-    // Return the complete user info message
-    return result;
+
+    // Create a user object
+    let user = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password
+    };
+
+    // Add the user to the users array
+    users.push(user);
+
+    // Create a message indicating the user is registered
+    let resultMessage = `User: ${firstName} ${lastName} with email ${email} is registered!`;
+
+    // Clear the input fields for the next user
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    emailInput.value = "";
+    passwordInput.value = "";
+
+    return resultMessage;
+  }
+
+  // Event listener for the Submit Button
+  submitBtn.addEventListener("click", function(event) {
+    // Prevent form submission behavior (in case it's inside a form)
+    event.preventDefault();
+
+    // Call the 'getUserInfo' function and display the result in the result paragraph
+    result.innerText = getUserInfo();
+  });
 }
-// An Event listener to the SUBMIT BUTTON 
-submitBtn.addEventListener("click", function(){
-// Call the 'getUserInfo' function and display the result in the 'result' paragraph
-    result.innerText = getUserInfo(inputs);
-});
+
