@@ -1,0 +1,61 @@
+/* ==> Heading 1 */
+h1 {
+    color: #28a745; /* Green color */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  
+  /* ==> Table */
+  /* Styling for the table */
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #28a745; 
+  }
+  
+  /* Styling the table headers */
+  th {
+    background-color: #28a745; 
+    color: white; 
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Styling the table cells */
+  td {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #28a745; 
+  }
+  
+  /* Hover effect for rows */
+  tr:hover {
+    background-color: #e6f9e1; 
+  }
+  
+  /* ==> Button */
+  /* Styling for the button */
+  #loadPersonData {
+    background-color: white; 
+    color: #218838 ; 
+    border-color: #218838;
+    border: 3%;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+  }
+  
+  #loadPersonData:hover {
+    background-color: #b2cab8; 
+  }
+  
+  
