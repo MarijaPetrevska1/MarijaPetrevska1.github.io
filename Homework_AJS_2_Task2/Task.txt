@@ -1,0 +1,38 @@
+The task: 
+
+After the user clicks the button to get the first 10 planets, a button should be shown below the table that says: NEXT
+10. When the button is clicked you should make another call and get the next 10 planets and change the table contents
+with information about the next 10 planets. After the next 10 planets are shown the button NEXT 10 should disapear and a
+new button PREVIOUS 10 should appear. The previous button should return the first 10 planets in the table and hide the
+PREVIOUS 10 button and show the NEXT 10 button.
+
+**API URL: ** https://swapi.py4e.com/api/planets/?page=2
+
+The solution:
+
+First I will start with the components the task should have: 
+
+Initializing the variables
+- variable to track the current page (currentPage), starting at 1 for the first set of planets
+- creating 2 buttons: Next 10 and Previous 10
+
+Functions Required: 
+=> Function that  will fetch planet data from the API, based on the current page (currentPage).
+(After the data is fetched, update the table with the new planet information).
+=> Creating the function that will loop through the planets data
+
+- Button visibility (following the steps): 
+1 . After the user clicks the button to get the first 10 planets, a button should be shown below the table that says: NEXT 10. 
+2. When the button is clicked you should make another call and get the next 10 planets and change the table contents with information about the next 10 planets. 
+3. After the next 10 planets are shown the button NEXT 10 should disapear and a new button PREVIOUS 10 should appear. 
+4. The previous button should return the first 10 planets in the table and hide the PREVIOUS 10 button and show the NEXT 10 button.
+
+- Button clicks
+    1. Initial click
+    2. NEXT 10
+    3. PREVIOUS 10
+
+-Fetchcing Data:
+For the first click, fetch data from https://swapi.py4e.com/api/planets/?page=1.
+For the other page, fetch data from https://swapi.py4e.com/api/planets/?page=2.
+

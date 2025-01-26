@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Star Wars Planets - Task 1</title>
+  </head>
+  <body>
+    <!-- Container for the heading, image, and button -->
+    <div class="header-container">
+      <!-- Heading and image container -->
+      <div class="header-content">
+        <img src="./assets/starWars.jpg" alt="Star Wars" id="starWars-img" />
+        <h1>Star Wars Planets</h1>
+      </div>
+      <!-- Button to load planet data (to fetch and show the planets) -->
+      <button id="show-planets-btn">Show Planets</button>
+    </div>
+
+    <!-- Container for the table and the image -->
+    <div class="table-container">
+      <!-- Table for displaying planet data -->
+      <table id="planets-table">
+        <thead>
+          <tr>
+            <th>Planet Name</th>
+            <th>Population</th>
+            <th>Climate</th>
+            <th>Gravity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Planet rows will be populated here -->
+        </tbody>
+      </table>
+
+      <!-- Planet image container -->
+      <div id="planet-image">
+        <img src="./assets/planetCollection.jpg" alt="Planet Collection" />
+      </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
+
+
