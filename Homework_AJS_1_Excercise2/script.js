@@ -19,7 +19,7 @@ function getPersonInfo() {
       displayPersonData(data);
     })
     .catch(function (error) {
-      console.error("Error occured:", error);
+      console.error("Error occurred:", error);
     });
 }
 
@@ -27,7 +27,7 @@ function getPersonInfo() {
 function displayPersonData(data) {
   const name = data.name;
   const height = data.height;
-  const weight = "N/A"; // Weight isn't available in the API
+  const mass = data.mass; // Using mass instead of weight
   const eyeColor = data.eye_color;
   const hairColor = data.hair_color;
 
@@ -36,14 +36,28 @@ function displayPersonData(data) {
 
   // Creating the table row
   const tbody = document.querySelector("#personInformation tbody");
-  tbody.innerHTML = "";
+  tbody.innerHTML = ""; // Clear any previous data
+
   const row = document.createElement("tr");
   row.innerHTML = `
-        <td>${height} cm</td>
-        <td>${weight}</td>
-        <td>${eyeColor}</td>
-        <td>${hairColor}</td>
-      `;
+    <td>${height} cm</td>
+    <td>${mass} kg</td> <!-- Showing mass as weight -->
+    <td>${eyeColor}</td>
+    <td>${hairColor}</td>
+  `;
+  tbody.appendChild(row);
+}
+
+// Function to initialize the table with placeholders
+function initializeTable() {
+  const tbody = document.querySelector("#personInformation tbody");
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  `;
   tbody.appendChild(row);
 }
 
@@ -51,3 +65,7 @@ function displayPersonData(data) {
 document
   .getElementById("loadPersonData")
   .addEventListener("click", getPersonInfo);
+
+// Initialize the table with placeholders
+initializeTable();
+

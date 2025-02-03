@@ -9,6 +9,9 @@ const tableBody = document.querySelector('#planets-table tbody');
 const planetImageContainer = document.getElementById('planet-image');
 let currentPage = 1; 
 
+// Base URL for fetching planets data
+const baseURL = 'https://swapi.py4e.com/api/planets/?page=';
+
 // Adding elements for NEXT 10 and PREVIOUS 10 buttons
 let nextButton = document.createElement('button');
 nextButton.textContent = 'NEXT 10';
@@ -42,7 +45,6 @@ function fetchPlanets(url) {
 }
 
 function displayPlanets(planets) {
-  // Loop through the planets using a traditional for loop
   for (let i = 0; i < planets.length; i++) {
     const planet = planets[i];
     const row = document.createElement('tr');
@@ -66,8 +68,9 @@ function displayPlanets(planets) {
     tableBody.appendChild(row);
   }
 }
-// Function to update the button visibillity
-function updateButtonVisibility(nextUrl, prevUrl) {
+
+// Function to update the button visibility
+function updateButtonVisibility() {
   if (currentPage === 1) {
     previousButton.style.display = 'none';
     nextButton.style.display = 'inline-block'; 
@@ -79,15 +82,15 @@ function updateButtonVisibility(nextUrl, prevUrl) {
 
 // Event Handlers
 button.addEventListener('click', function() {
-  fetchPlanets(`https://swapi.py4e.com/api/planets/?page=${currentPage}`);
+  fetchPlanets(`${baseURL}${currentPage}`);
 });
 
 nextButton.addEventListener('click', function() {
   currentPage++;
-  fetchPlanets(`https://swapi.py4e.com/api/planets/?page=${currentPage}`);
+  fetchPlanets(`${baseURL}${currentPage}`);
 });
 
 previousButton.addEventListener('click', function() {
   currentPage--;
-  fetchPlanets(`https://swapi.py4e.com/api/planets/?page=${currentPage}`);
+  fetchPlanets(`${baseURL}${currentPage}`);
 });
