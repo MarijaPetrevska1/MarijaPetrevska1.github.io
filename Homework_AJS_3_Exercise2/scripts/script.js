@@ -55,8 +55,13 @@ fetch(apiUrl)
 
     // 8. Average price of all iPhone smartphones
     const iPhoneProducts = products.filter(product => product.title.toLowerCase().includes('iPhone'));
+    // Checking if there are any iPhone products
+    if (iPhoneProducts.length > 0) {
     const avgIphoneSmartphonesPrice = iPhoneProducts.reduce((sum, product) => sum + product.price, 0) / iPhoneProducts.length;
     console.log("8. Average price of all iPhone smartphones:", avgIphoneSmartphonesPrice.toFixed(2));
+    } else {
+     console.log("No iPhone smartphones found.");
+    }
 
     // 9. The product with the lowest price
     const lowestPriceProduct = products.reduce(function(min, product) {
