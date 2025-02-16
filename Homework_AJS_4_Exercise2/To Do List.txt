@@ -1,0 +1,45 @@
+
+## Exercise 2
+============================================================================================
+(from Exercise 1)
+===> 1. Creating the Academy class:
+
+Initializing name, students, subjects, start, end, and numberOfClasses 
+(calculated from subjects).
+Adding methods printStudents() and printSubjects() to print students and subjects.
+
+===> 2. Creating the Subject class:
+
+Initializing title, numberOfClasses (default 10), isElective, academy, and students.
+Adding overrideClasses() to change the number of classes, ensuring it's not less than 3.
+
+===> 3.Creating the Student class:
+
+Initializing firstName, lastName, age, completedSubjects, academy, and currentSubject.
+Adding startAcademy() to enroll in an academy and startSubject() to enroll in a subject, 
+validating conditions.
+
+Creating an Academy, Subject objects, and link subjects to the academy.
+Creating Student objects, enroll them in the academy, and assign them to subjects.
+
+Checking if the methods work correctly (printing students/subjects, enrolling students, 
+overriding class count).
+Handle error cases like invalid subject enrollment or too few classes.
+
++ from Exercise 2:
+
+1. StartAcademy - Adding Students to Academy Students List:
+
+Checking if the student is already enrolled in an academy: 
+Adding the student to the academy’s Students list: The student is added to the students array of the academy that is passed into StartAcademy.
+Setting the student’s Academy: The student’s academy property is set to the passed-in academy.
+
+2. StartSubject - Adding Student to Subject Students List
+ When the student calls StartSubject the student should also be added to the Subject property Students ( The subject that he is starting ). 
+ If there was another subject in the CurrentSubject property, that subject should be transferred to CompletedSubjects and then add the new Subject.
+
+====> Dynamic startAcademy Method.
+====> Dynamic startSubject Method.
+====> Testing scenarios
+====> Output
+

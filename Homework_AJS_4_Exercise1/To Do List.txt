@@ -1,0 +1,26 @@
+
+## Exercise 1
+============================================================================================
+===> 1. Creating the Academy class:
+
+Initializing name, students, subjects, start, end, and numberOfClasses 
+(calculated from subjects).
+Adding methods printStudents() and printSubjects() to print students and subjects.
+
+===> 2. Creating the Subject class:
+
+Initializing title, numberOfClasses (default 10), isElective, academy, and students.
+Adding overrideClasses() to change the number of classes, ensuring it's not less than 3.
+
+===> 3.Creating the Student class:
+
+Initializing firstName, lastName, age, completedSubjects, academy, and currentSubject.
+Adding startAcademy() to enroll in an academy and startSubject() to enroll in a subject, 
+validating conditions.
+
+Creating an Academy, Subject objects, and link subjects to the academy.
+Creating Student objects, enroll them in the academy, and assign them to subjects.
+
+Checking if the methods work correctly (printing students/subjects, enrolling students, 
+overriding class count).
+Handle error cases like invalid subject enrollment or too few classes.
